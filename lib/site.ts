@@ -44,7 +44,7 @@ export const site = {
     { to: 10, suffix: "+", label: "Años de experiencia" },
     { to: 1000, suffix: "+", thousands: true, label: "Clientes atendidos" },
     { to: 100, suffix: "%", label: "Acompañamiento cercano" },
-    { to: 4, suffix: "", label: "Ciudades en Ecuador" },
+    { to: 6, suffix: "", label: "Ciudades en Ecuador" },
   ],
 } as const;
 

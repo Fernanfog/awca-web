@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Cobertura en Ecuador",
   description:
-    "Atención de auditoría, tributación y contabilidad para empresas en Riobamba, Quito, Guayaquil, Manta y otras ciudades del Ecuador.",
+    "Atención de auditoría, tributación y contabilidad para empresas en Riobamba, Quito, Guayaquil, Manta, Ambato, Santo Domingo y otras ciudades del Ecuador.",
 };
 
 export default function UbicacionLayout({

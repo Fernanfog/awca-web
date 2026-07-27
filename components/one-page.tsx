@@ -426,7 +426,7 @@ const faqs = [
   },
   {
     q: "¿Trabajan con empresas de mi ciudad?",
-    a: "Atendemos en Riobamba, Quito, Guayaquil y Manta, y trabajamos a distancia con clientes de todo el país. La mayoría de trámites hoy son 100% digitales.",
+    a: "Atendemos en Riobamba, Quito, Guayaquil, Manta, Ambato y Santo Domingo, y trabajamos a distancia con clientes de todo el país. La mayoría de trámites hoy son 100% digitales.",
   },
   {
     q: "¿Qué necesito para empezar?",
@@ -641,7 +641,7 @@ export function OnePage() {
             </h2>
             <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-niebla-400">
               Un equipo ecuatoriano que conoce tu caso por su nombre. Riobamba ·
-              Quito · Guayaquil · Manta.
+              Quito · Guayaquil · Manta · Ambato · Santo Domingo.
             </p>
           </Rise>
 
@@ -655,6 +655,19 @@ export function OnePage() {
                   sizes="(max-width:1024px) 100vw, 1024px"
                   className="object-cover"
                 />
+                {/* Frase editorial sobre la foto: le da caché premium y lleva
+                    la mirada al mensaje (no a los detalles de la imagen). */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-noche-950/92 via-noche-950/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
+                  <p className="tech-label text-brand-300">El equipo AWCA</p>
+                  <p className="mt-2 max-w-xl text-xl font-light leading-snug text-blanco sm:text-[1.9rem]">
+                    Rigor de auditores,{" "}
+                    <em className="accent-serif text-brand-200">
+                      cercanía de siempre
+                    </em>
+                    .
+                  </p>
+                </div>
               </div>
             </div>
           </TiltReveal>

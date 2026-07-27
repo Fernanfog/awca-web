@@ -13,7 +13,14 @@ import { DetailHero, Reveal } from "@/components/one/detail";
 import { Aurora } from "@/components/one/aurora";
 import { site, whatsappLink } from "@/lib/site";
 
-const ciudades = ["Riobamba", "Quito", "Guayaquil", "Manta"];
+const ciudades = [
+  "Riobamba",
+  "Quito",
+  "Guayaquil",
+  "Manta",
+  "Ambato",
+  "Santo Domingo",
+];
 
 export default function UbicacionPage() {
   return (
@@ -33,7 +40,7 @@ export default function UbicacionPage() {
         <div className="relative z-10 mx-auto max-w-5xl px-6 sm:px-8">
         {/* Ciudades */}
         <Reveal>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {ciudades.map((c) => (
               <div
                 key={c}
