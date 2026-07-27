@@ -230,6 +230,10 @@ body {
 }
 .scroll-cue { animation: scrollcue 1.8s ease-in-out infinite; }
 
+/* Constelación del emblema del logo — órbita lenta y premium */
+@keyframes emblem-orbit { to { transform: rotate(360deg); } }
+.emblem-orbit { transform-origin: center; animation: emblem-orbit 46s linear infinite; }
+
 /* Lenis */
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
@@ -238,4 +242,5 @@ html.lenis, html.lenis body { height: auto; }
 
 @media (prefers-reduced-motion: reduce) {
   .scroll-cue { animation: none; }
+  .emblem-orbit { animation: none; }
 }
