@@ -8,7 +8,7 @@ export const site = {
   tagline: "Auditoría · Contabilidad · Tributación",
   description:
     "Firma ecuatoriana de auditoría, contabilidad y tributación. Cumples con el SRI, entiendes tus estados financieros y decides con datos.",
-  url: "https://auditwhole.com",
+  url: "https://www.auditwhole.com",
 
   // 📞 Contacto — datos de la ficha de Google Business (AWCA, Riobamba)
   contact: {
