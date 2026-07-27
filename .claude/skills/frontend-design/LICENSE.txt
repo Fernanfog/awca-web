@@ -1,0 +1,7 @@
+Vendored from https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design
+(plugin "frontend-design" v1.1.0, authors: Prithvi Rajasekaran, Alexander Bricken)
+
+© Anthropic PBC. All rights reserved. Use is subject to Anthropic's Commercial
+Terms of Service: https://www.anthropic.com/legal/commercial-terms
+
+Full repository license: https://github.com/anthropics/claude-code/blob/main/LICENSE.md

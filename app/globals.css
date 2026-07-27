@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+/* ===========================================================================
+   AWCA — Sistema de diseño · CLARO CORPORATIVO + BANDAS NOCHE
+   Ritmo alternado: papel frío (casi blanco con matiz azul, NO crema cálida)
+   para leer con calma → bandas noche con el metraje hora-azul de la firma.
+   Un único acento: el AZUL ELÉCTRICO del brandbook. El hilo de neón cose todo.
+   Tipografía: Hanken Grotesk (titulares) + Playfair (una palabra itálica) +
+   Geist Mono (etiquetas técnicas).
+   =========================================================================== */
+
+@theme {
+  /* --- Papel (claro) --- */
+  --color-papel: #eef1f7;
+  --color-papel-100: #ffffff;
+  --color-papel-200: #e4e8f1;
+
+  /* --- Noche (bandas de video) --- */
+  --color-noche-950: #070b14;
+  --color-noche-900: #0a0f1c;
+  --color-noche-800: #101726;
+
+  /* --- Tinta (texto sobre claro) --- */
+  --color-tinta-900: #0a0f1c;
+  --color-tinta-600: #454b5c;
+  --color-tinta-400: #7a8092;
+
+  /* --- Niebla (texto sobre noche) --- */
+  --color-blanco: #f4f7ff;
+  --color-niebla-400: #aab4cc;
+  --color-niebla-500: #7d89a3;
+
+  /* --- Azul eléctrico de marca --- */
+  --color-brand-700: #1015c2;
+  --color-brand-600: #1b20e8;
+  --color-brand-500: #3a44ff;
+  --color-brand-400: #6a74ff;
+  --color-brand-300: #9aa2ff;
+  --color-brand-50: #eaecff;
+
+  /* --- Acentos secundarios: confianza, claridad y criterio --- */
+  --color-aqua-700: #0b716d;
+  --color-aqua-600: #0f918a;
+  --color-aqua-100: #d8f3f0;
+  --color-aqua-50: #edf9f7;
+  --color-gold-700: #806225;
+  --color-gold-600: #a88335;
+  --color-gold-100: #f4e8c9;
+  --color-gold-50: #fbf6e9;
+
+  /* --- Compat: tokens legados de subpáginas viejas --- */
+  --color-ink-900: #0a0f1c;
+  --color-ink-700: #3a3a3d;
+  --color-ink-500: #6b6b72;
+  --color-ink-400: #8b8b92;
+  --color-cream-100: #f6f3f0;
+
+  /* --- Tipografía --- */
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+:root {
+  --background: #eef1f7;
+  --foreground: #0a0f1c;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(27, 32, 232, 0.22);
+  color: #0a0f1c;
+}
+
+/* ---------- Utilidades ---------- */
+
+.accent-serif {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.tech-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Tarjeta clara premium */
+.card-light {
+  background: var(--color-papel-100);
+  border: 1px solid rgba(10, 15, 28, 0.08);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 1px 2px rgba(10, 15, 28, 0.04),
+    0 18px 50px -24px rgba(10, 15, 28, 0.16);
+}
+
+/* Oculta la barra de scroll en carruseles con scroll nativo (sin libs) */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar de vidrio (se adapta al fondo por variable inline). Degradado sutil
+   (blanco arriba → gris-azulado frío abajo) + brillo fino en el borde
+   superior, para que se sienta vidrio real y no una barra blanca plana. */
+.glass-light {
+  background: linear-gradient(
+    180deg,
+    rgb(252, 253, 255) 0%,
+    rgb(230, 234, 244) 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.glass-dark {
+  background: rgba(7, 11, 20, 0.92);
+}
+
+/* Halo de neón puntual */
+.neon-glow {
+  background: radial-gradient(closest-side, rgba(58, 68, 255, 0.3), transparent);
+  filter: blur(36px);
+}
+
+/* Reel de testimonios: texto que sube letra por letra + salida del bloque */
+@keyframes scroll-reel-char-rise {
+  from { opacity: 0; transform: translateY(0.55em); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scroll-reel-exit {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-12px); }
+}
+.scroll-reel-char {
+  display: inline-block;
+  opacity: 0;
+  animation: scroll-reel-char-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.scroll-reel-exit {
+  animation: scroll-reel-exit 0.24s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reel-char { animation: none; opacity: 1; }
+  .scroll-reel-exit { animation: none; }
+}
+
+/* Aurora suave para secciones claras: resplandores azules que se desplazan
+   despacio, dando vida al fondo sin ensuciar (estilo Apple). */
+@keyframes aurora-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(9%, 7%) scale(1.18); }
+}
+@keyframes aurora-b {
+  0%, 100% { transform: translate(0, 0) scale(1.1); }
+  50% { transform: translate(-8%, -6%) scale(0.95); }
+}
+@keyframes aurora-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(6%, -8%) scale(1.12); }
+}
+.aurora-a { animation: aurora-a 26s ease-in-out infinite; }
+.aurora-b { animation: aurora-b 32s ease-in-out infinite; }
+.aurora-c { animation: aurora-c 38s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .aurora-a, .aurora-b, .aurora-c { animation: none; }
+}
+
+/* Corriente de datos para la banda de cifras de La firma. Haces amplios y
+   retícula contable se mueven solo con transform/background-position. */
+@keyframes stats-current {
+  0%, 100% { transform: translate3d(-8%, 2%, 0) rotate(-4deg); }
+  50% { transform: translate3d(9%, -3%, 0) rotate(2deg); }
+}
+@keyframes stats-ledger {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 72px 0, 0 48px; }
+}
+.stats-current {
+  background:
+    linear-gradient(112deg, transparent 28%, rgba(58, 68, 255, 0.08) 36%, rgba(58, 68, 255, 0.58) 48%, rgba(15, 145, 138, 0.24) 55%, transparent 67%),
+    linear-gradient(72deg, transparent 39%, rgba(154, 162, 255, 0.2) 47%, transparent 56%);
+  filter: blur(18px);
+  animation: stats-current 14s ease-in-out infinite;
+  will-change: transform;
+}
+.stats-ledger {
+  background-image:
+    linear-gradient(90deg, rgba(154, 162, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(rgba(154, 162, 255, 0.06) 1px, transparent 1px);
+  background-size: 72px 100%, 100% 48px;
+  mask-image: linear-gradient(90deg, transparent, black 18%, black 82%, transparent);
+  animation: stats-ledger 18s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .stats-current, .stats-ledger { animation: none; }
+}
+
+/* Velo para legibilidad sobre video (bandas noche) */
+.video-veil {
+  background: linear-gradient(
+    to top,
+    rgba(7, 11, 20, 0.92) 0%,
+    rgba(7, 11, 20, 0.35) 42%,
+    rgba(7, 11, 20, 0.12) 68%,
+    rgba(7, 11, 20, 0.55) 100%
+  );
+}
+.video-fade-top { background: linear-gradient(to bottom, var(--color-papel), transparent); }
+.video-fade-bottom { background: linear-gradient(to top, var(--color-papel), transparent); }
+
+/* Indicador de scroll */
+@keyframes scrollcue {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+.scroll-cue { animation: scrollcue 1.8s ease-in-out infinite; }
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue { animation: none; }
+}
