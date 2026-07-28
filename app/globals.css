@@ -230,9 +230,14 @@ body {
 }
 .scroll-cue { animation: scrollcue 1.8s ease-in-out infinite; }
 
-/* Constelación del emblema del logo — órbita lenta y premium */
-@keyframes emblem-orbit { to { transform: rotate(360deg); } }
-.emblem-orbit { transform-origin: center; animation: emblem-orbit 46s linear infinite; }
+/* Emblema del logo hecho con nodos — iluminación premium */
+@keyframes emblem-node { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+.emblem-node { animation: emblem-node 3.2s ease-in-out infinite; }
+@keyframes emblem-breathe {
+  0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.62; transform: translate(-50%, -50%) scale(1.08); }
+}
+.emblem-breathe { animation: emblem-breathe 4.6s ease-in-out infinite; }
 
 /* Lenis */
 html.lenis, html.lenis body { height: auto; }
@@ -242,5 +247,6 @@ html.lenis, html.lenis body { height: auto; }
 
 @media (prefers-reduced-motion: reduce) {
   .scroll-cue { animation: none; }
-  .emblem-orbit { animation: none; }
+  .emblem-node,
+  .emblem-breathe { animation: none; }
 }

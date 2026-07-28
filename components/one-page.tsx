@@ -662,9 +662,9 @@ export function OnePage() {
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_95%_at_50%_38%,transparent_28%,rgba(7,11,20,0.6)_100%)]" />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-noche-950/95 via-noche-950/35 to-noche-950/10" />
 
-                {/* Emblema premium: logo real de AWCA orbitado por nodos, con
-                    brillo — sello de marca sobre el equipo. */}
-                <LogoEmblem className="absolute left-1/2 top-[7%] h-24 w-24 -translate-x-1/2 sm:top-[9%] sm:h-32 sm:w-32" />
+                {/* Emblema premium: el logo de AWCA CONSTRUIDO con nodos
+                    iluminados — sello de marca grande sobre el equipo. */}
+                <LogoEmblem className="absolute left-1/2 top-[10%] w-[66%] max-w-[440px] -translate-x-1/2 sm:top-[12%] sm:w-[56%]" />
 
                 {/* Frase editorial sobre la foto: le da caché premium y lleva
                     la mirada al mensaje (no a los detalles de la imagen). */}
