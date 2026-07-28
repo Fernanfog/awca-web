@@ -664,7 +664,7 @@ export function OnePage() {
 
                 {/* Emblema premium: el logo de AWCA CONSTRUIDO con nodos
                     iluminados — sello de marca grande sobre el equipo. */}
-                <LogoEmblem className="absolute left-1/2 top-[10%] w-[66%] max-w-[440px] -translate-x-1/2 sm:top-[12%] sm:w-[56%]" />
+                <LogoEmblem className="absolute left-1/2 top-[11%] w-[46%] max-w-[300px] -translate-x-1/2 sm:top-[13%] sm:w-[38%]" />
 
                 {/* Frase editorial sobre la foto: le da caché premium y lleva
                     la mirada al mensaje (no a los detalles de la imagen). */}
