@@ -230,9 +230,20 @@ body {
 }
 .scroll-cue { animation: scrollcue 1.8s ease-in-out infinite; }
 
-/* Emblema del logo hecho con nodos — iluminación premium */
-@keyframes emblem-node { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
-.emblem-node { animation: emblem-node 3.2s ease-in-out infinite; }
+/* Emblema del logo hecho con nodos — onda de luz que barre + glow premium.
+   El delay negativo (por X, en el componente) desfasa cada nodo → la parte
+   brillante viaja de izquierda a derecha en bucle continuo. */
+@keyframes emblem-node {
+  0% { opacity: 0.55; transform: scale(1); }
+  12% { opacity: 1; transform: scale(1.35); }
+  32% { opacity: 0.55; transform: scale(1); }
+  100% { opacity: 0.55; transform: scale(1); }
+}
+.emblem-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emblem-node 3.2s linear infinite;
+}
 @keyframes emblem-breathe {
   0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
   50% { opacity: 0.62; transform: translate(-50%, -50%) scale(1.08); }
