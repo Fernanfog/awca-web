@@ -64,18 +64,17 @@ export function DetailHero({
                 fill
                 priority
                 sizes="100vw"
-                className="object-cover object-center opacity-[0.5] contrast-[1.05]"
+                className="object-cover object-center opacity-[0.7] contrast-[1.05]"
               />
             </div>
-            {/* Base de oscurecimiento uniforme: garantiza contraste del texto
-                aunque detrás caiga una zona clara de la imagen (el bug del
-                mostrador blanco de recepción tapando el subtítulo). */}
-            <div className="pointer-events-none absolute inset-0 bg-noche-950/35" />
-            {/* degradado horizontal: oscuro sólido en TODA la zona del texto
-                (izquierda) que recién se abre pasada la mitad-derecha */}
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(7,11,20,0.96)_0%,rgba(7,11,20,0.92)_48%,rgba(7,11,20,0.72)_72%,rgba(7,11,20,0.5)_100%)]" />
-            {/* viñeta arriba/abajo para dar profundidad y fundir con la nav */}
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,11,20,0.72)_0%,transparent_38%,transparent_64%,rgba(7,11,20,0.9)_100%)]" />
+            {/* Base de oscurecimiento tenue: solo un piso de contraste, sin
+                apagar la imagen (antes quedaba casi negra). */}
+            <div className="pointer-events-none absolute inset-0 bg-noche-950/12" />
+            {/* degradado horizontal: oscuro donde va el texto (izquierda) y se
+                ABRE bastante a la derecha para que se vea la foto. */}
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(7,11,20,0.92)_0%,rgba(7,11,20,0.78)_42%,rgba(7,11,20,0.4)_68%,rgba(7,11,20,0.12)_100%)]" />
+            {/* viñeta arriba/abajo suave, para fundir con la nav y dar profundidad */}
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,11,20,0.5)_0%,transparent_34%,transparent_70%,rgba(7,11,20,0.72)_100%)]" />
             {/* resplandor azul de marca, sutil, saliendo del margen */}
             <div
               aria-hidden
