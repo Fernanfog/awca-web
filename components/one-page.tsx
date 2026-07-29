@@ -960,23 +960,43 @@ export function OnePage() {
             </a>
           </Rise>
           <Rise delay={0.1}>
-            {/* Vidrio premium sobre la Aurora — ya sin canvas animado detrás,
-                vuelve al blur rico (2xl) que usan el resto de tarjetas glass. */}
-            <div className="divide-y divide-tinta-900/10 rounded-2xl border border-white/60 bg-white/35 px-6 shadow-[0_18px_48px_-22px_rgba(10,15,28,0.42),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(10,15,28,0.06)] backdrop-blur-2xl backdrop-saturate-150 sm:px-8">
-              {faqs.map((f) => (
-                <details key={f.q} className="group py-5">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-tinta-900 [&::-webkit-details-marker]:hidden">
-                    {f.q}
-                    <ChevronDown
-                      size={18}
-                      className="shrink-0 text-brand-600 transition-transform duration-300 group-open:rotate-180"
+            {/* Cada pregunta es su propia tarjeta liquid-glass (mismo lenguaje
+                que "Cómo trabajamos"): wash de color, brillo interior y hover
+                que se levanta. */}
+            <div className="space-y-3">
+              {faqs.map((f, i) => {
+                const wash = [
+                  "bg-brand-400",
+                  "bg-[#0f918a]",
+                  "bg-[#c79a3a]",
+                  "bg-[#5276a7]",
+                  "bg-brand-500",
+                ][i % 5];
+                return (
+                  <details
+                    key={f.q}
+                    className="group relative overflow-hidden rounded-2xl border border-white/55 bg-white/25 px-5 shadow-[0_18px_48px_-22px_rgba(10,15,28,0.42),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(10,15,28,0.06)] backdrop-blur-2xl backdrop-saturate-150 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/35 open:bg-white/40 sm:px-6"
+                  >
+                    {/* wash de color propio de cada tarjeta */}
+                    <span
+                      aria-hidden
+                      className={`pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full opacity-40 blur-2xl ${wash}`}
                     />
-                  </summary>
-                  <p className="mt-3 max-w-xl text-sm leading-relaxed text-tinta-600">
-                    {f.a}
-                  </p>
-                </details>
-              ))}
+                    <summary className="relative flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-base font-medium text-tinta-900 [&::-webkit-details-marker]:hidden">
+                      {f.q}
+                      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/60 bg-white/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] backdrop-blur-md">
+                        <ChevronDown
+                          size={16}
+                          className="text-brand-600 transition-transform duration-300 group-open:rotate-180"
+                        />
+                      </span>
+                    </summary>
+                    <p className="relative -mt-1 max-w-xl pb-5 text-sm leading-relaxed text-tinta-600">
+                      {f.a}
+                    </p>
+                  </details>
+                );
+              })}
             </div>
           </Rise>
         </div>
