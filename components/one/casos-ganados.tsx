@@ -12,8 +12,8 @@ const casos = [
   {
     img: "/img/caso-audiencia.webp",
     alt: "Audiencia ante el SRI: deuda impugnada de USD 488.677 defendida por AWCA",
-    cifra: "$488.677",
-    desc: "en deuda tributaria impugnada, defendida en audiencia ante el SRI.",
+    cifra: "$488.677 → $0",
+    desc: "Deuda tributaria impugnada y defendida en audiencia ante el SRI.",
   },
   {
     img: "/img/caso-macas.webp",
