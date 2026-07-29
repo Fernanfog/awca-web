@@ -717,7 +717,7 @@ export function OnePage() {
       >
         {/* Fondo: nuestra recepción, con el logo AWCA en la pared */}
         <Image
-          src="/img/reception-v6.webp"
+          src="/img/oficina.webp"
           alt="Recepción de AWCA"
           fill
           sizes="100vw"

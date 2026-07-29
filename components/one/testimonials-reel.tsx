@@ -376,7 +376,7 @@ export function TestimonialsReel({ items }: { items: Testimonio[] }) {
       className="relative z-10 overflow-hidden bg-papel px-6 py-16 sm:px-8 sm:py-28"
     >
       <Image
-        src="/img/reception-v6.webp"
+        src="/img/oficina.webp"
         alt=""
         fill
         sizes="100vw"

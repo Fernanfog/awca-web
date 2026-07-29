@@ -55,7 +55,7 @@ const valores = [
     icon: Eye,
     t: "Visión",
     d: "Ser la firma contable y tributaria de referencia en Ecuador, reconocida por su cercanía, ética y excelencia profesional.",
-    img: "/img/reception-v6.webp",
+    img: "/img/oficina.webp",
   },
   {
     icon: Gem,
@@ -73,7 +73,7 @@ export default function NosotrosPage() {
         title="Diez años cuadrando números"
         accent="en todo el país."
         sub="Somos una firma ecuatoriana de profesionales en contabilidad, tributación y auditoría, comprometidos con el crecimiento de cada cliente."
-        backgroundImage="/img/reception-v6.webp"
+        backgroundImage="/img/oficina-entrada.webp"
         split
         dark
       />

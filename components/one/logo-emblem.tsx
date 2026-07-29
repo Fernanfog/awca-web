@@ -21,9 +21,9 @@ export function LogoEmblem({ className }: { className?: string }) {
       <Image
         src="/logo-mark-white.png"
         alt="AWCA"
-        width={433}
-        height={174}
-        sizes="340px"
+        width={586}
+        height={246}
+        sizes="(max-width: 640px) 46vw, 300px"
         className="relative h-auto w-full opacity-95 drop-shadow-[0_0_16px_rgba(90,107,255,0.5)]"
       />
     </div>

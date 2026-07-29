@@ -71,7 +71,7 @@ export default function ContactoPage() {
         title="Hablemos de"
         accent="tu empresa."
         sub="Estamos a un mensaje de distancia. Cuéntanos qué necesitas y te asesoramos sin compromiso — sin tecnicismos y sin rodeos."
-        backgroundImage="/img/reception-v6.webp"
+        backgroundImage="/img/oficina.webp"
         dark
       />
 

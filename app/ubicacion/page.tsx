@@ -69,18 +69,38 @@ export default function UbicacionPage() {
 
         {/* La matriz — mapa real de la ficha de Google + datos de visita */}
         <Reveal delay={0.06}>
-          <div className="mt-6 grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
-            {/* Mapa embebido de la ficha de Google Business */}
-            <div className="relative min-h-[320px] overflow-hidden rounded-2xl border border-white/55 shadow-[0_18px_48px_-22px_rgba(10,15,28,0.42)]">
-              <iframe
-                src={site.contact.maps.embedUrl}
-                title="Mapa de la matriz de AWCA en Riobamba"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-                className="absolute inset-0 h-full w-full border-0"
+          <div className="mt-6 grid gap-4 lg:grid-cols-[0.78fr_1.22fr]">
+            {/* Foto real del edificio de la matriz */}
+            <figure className="relative min-h-[360px] overflow-hidden rounded-2xl border border-white/55 shadow-[0_18px_48px_-22px_rgba(10,15,28,0.42)]">
+              <Image
+                src="/img/matriz-exterior.webp"
+                alt="Edificio donde está la matriz de AWCA en Riobamba"
+                fill
+                sizes="(max-width:1024px) 100vw, 340px"
+                className="object-cover"
               />
-            </div>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-noche-950/85 via-noche-950/10 to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-5">
+                <p className="tech-label text-brand-300">Nuestra matriz</p>
+                <p className="mt-1 text-lg font-light leading-snug text-blanco">
+                  Te esperamos en Riobamba
+                </p>
+              </figcaption>
+            </figure>
+
+            {/* Columna derecha: mapa + datos de visita */}
+            <div className="grid gap-4">
+              {/* Mapa embebido de la ficha de Google Business */}
+              <div className="relative min-h-[300px] overflow-hidden rounded-2xl border border-white/55 shadow-[0_18px_48px_-22px_rgba(10,15,28,0.42)]">
+                <iframe
+                  src={site.contact.maps.embedUrl}
+                  title="Mapa de la matriz de AWCA en Riobamba"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full border-0"
+                />
+              </div>
 
             {/* Datos de visita, en el mismo vidrio del resto del sitio */}
             <div className="relative flex flex-col overflow-hidden rounded-2xl border border-white/55 bg-white/25 p-7 shadow-[0_18px_48px_-22px_rgba(10,15,28,0.42),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(10,15,28,0.06)] backdrop-blur-2xl backdrop-saturate-150">
@@ -122,6 +142,7 @@ export default function UbicacionPage() {
               >
                 Cómo llegar <ArrowUpRight size={16} />
               </a>
+            </div>
             </div>
           </div>
         </Reveal>
