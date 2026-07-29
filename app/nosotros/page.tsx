@@ -13,9 +13,9 @@ import { site } from "@/lib/site";
 /* Asesores reales atendiendo clientes — el lado humano de "La firma". */
 const atencion = [
   {
-    src: "/img/asesor-cliente-1.webp",
-    alt: "Asesor de AWCA atendiendo a una clienta en la oficina",
-    caption: "Cada caso tiene un responsable con nombre y apellido.",
+    src: "/img/equipo-trabajo.webp",
+    alt: "El equipo de AWCA trabajando en su oficina de Riobamba",
+    caption: "Un equipo real, en nuestra oficina de Riobamba.",
     span: "lg:col-span-2 lg:row-span-2",
     ratio: "aspect-[16/11]",
     big: true,

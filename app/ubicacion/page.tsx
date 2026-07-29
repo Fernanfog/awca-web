@@ -30,7 +30,7 @@ export default function UbicacionPage() {
         title="Donde esté tu empresa,"
         accent="llegamos."
         sub="Atendemos empresas en las principales ciudades del país y acompañamos procesos de forma virtual en todo Ecuador."
-        backgroundImage="/img/andes.webp"
+        backgroundImage="/img/equipo-trabajo.webp"
         dark
       />
 
