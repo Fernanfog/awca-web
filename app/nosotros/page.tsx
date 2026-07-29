@@ -15,7 +15,7 @@ const atencion = [
   {
     src: "/img/equipo-trabajo.webp",
     alt: "El equipo de AWCA trabajando en su oficina de Riobamba",
-    caption: "Un equipo real, en nuestra oficina de Riobamba.",
+    caption: "Tu caso, siempre en las mismas manos.",
     span: "lg:col-span-2 lg:row-span-2",
     ratio: "aspect-[16/11]",
     big: true,
