@@ -14,10 +14,11 @@ export const site = {
   contact: {
     email: "fernando.granizo@auditwhole.com",
     // Número en formato internacional sin signos, ej: 5939XXXXXXXX
-    whatsapp: "593981713529",
+    // (0963109509 → sin el 0 y con 593 = 593963109509)
+    whatsapp: "593963109509",
     whatsappMessage:
       "Hola AWCA, me gustaría recibir información sobre sus servicios.",
-    phone: "+593 98 171 3529",
+    phone: "+593 96 310 9509",
     city: "Riobamba, Ecuador",
     // 📍 Matriz — ficha verificada en Google Maps
     address: "Av. Daniel León Borja, Riobamba",
