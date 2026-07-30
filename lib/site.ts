@@ -21,7 +21,7 @@ export const site = {
     phone: "+593 96 310 9509",
     city: "Riobamba, Ecuador",
     // 📍 Matriz — ficha verificada en Google Maps
-    address: "Av. Daniel León Borja, Riobamba",
+    address: "Av. Daniel León Borja, 4.º piso · Riobamba",
     schedule: "Lun – Vie · hasta las 18:00",
     maps: {
       lat: -1.6674991,
