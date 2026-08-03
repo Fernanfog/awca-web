@@ -26,7 +26,6 @@ import {
 import { TitleReveal, Counter, ParallaxVideo } from "@/components/one/motion-bits";
 import { LampGlow } from "@/components/ui/lamp";
 import { TiltReveal } from "@/components/one/tilt-reveal";
-import { LogoEmblem } from "@/components/one/logo-emblem";
 import { Aurora } from "@/components/one/aurora";
 import { CasosGanados } from "@/components/one/casos-ganados";
 import { TestimonialsReel } from "@/components/one/testimonials-reel";
@@ -656,18 +655,11 @@ export function OnePage() {
                   sizes="(max-width:1024px) 100vw, 1024px"
                   className="object-cover"
                 />
-                {/* Oscurecido premium + viñeta: da profundidad, hace resaltar
-                    el emblema y difumina cualquier detalle de la imagen IA. */}
-                <div className="pointer-events-none absolute inset-0 bg-noche-950/35" />
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_95%_at_50%_38%,transparent_28%,rgba(7,11,20,0.6)_100%)]" />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-noche-950/95 via-noche-950/35 to-noche-950/10" />
+                {/* Solo un degradado mínimo abajo para que la frase se lea —
+                    foto limpia, sin sombreado general ni logo. */}
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-noche-950/85 via-noche-950/20 to-transparent" />
 
-                {/* Emblema premium: el logo de AWCA CONSTRUIDO con nodos
-                    iluminados — sello de marca grande sobre el equipo. */}
-                <LogoEmblem className="absolute left-1/2 top-[11%] w-[46%] max-w-[300px] -translate-x-1/2 sm:top-[13%] sm:w-[38%]" />
-
-                {/* Frase editorial sobre la foto: le da caché premium y lleva
-                    la mirada al mensaje (no a los detalles de la imagen). */}
+                {/* Frase editorial sobre la foto */}
                 <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
                   <p className="tech-label text-brand-300">El equipo AWCA</p>
                   <p className="mt-2 max-w-xl text-xl font-light leading-snug text-blanco sm:text-[1.9rem]">
